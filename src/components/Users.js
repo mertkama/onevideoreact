@@ -3,12 +3,12 @@ import User from "./User";
 
 class Users extends Component {
     render() {
+        const {users} = this.props;
+        
         return (
             <table className="table table-dark">
                 <thead>
-
                     <tr>
-
                         <th scope="col">id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
@@ -16,10 +16,20 @@ class Users extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    <User />
+                    {
+                        users.map(user => {
+                            const { id, name, email } = user;
+
+                            return <User
+                                id={id}
+                                name={name}
+                                email={email}
+                            />
+                        })
+                    }
                 </tbody>
-            </table> 
-            ); 
+            </table>
+        );
     }
 }
 

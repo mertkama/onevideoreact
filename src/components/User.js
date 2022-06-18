@@ -9,7 +9,7 @@ class User extends Component {
                 <td>Salah Birsel</td>
                 <td>birsel@gmail.com</td>
                 <td>
-                    <button class ="btn btn-danger">Delete</button>
+                    <button className="btn btn-danger">Delete</button>
                     </td>
             </tr>
         );
